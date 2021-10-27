@@ -12,28 +12,46 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$em-ex-machina-app-primary: mat.define-palette(mat.$grey-palette, 800, 200, 900);
-$em-ex-machina-app-accent: mat.define-palette(mat.$grey-palette, A800, A200, A900);
+$machina-primary: mat.define-palette(mat.$grey-palette, 800, 50, 900);
+
+// runner palette
+$runner-accent: (
+  main: #d32f18,
+  lighter: #e08e8a,
+  darker: #990000,
+  text: white,
+  contrast: (
+    main: rgba(white, 0.87),
+    lighter: rgba(white, 0.87),
+    darker: rgba(white, 0.87)
+  )
+);
+
+$machina-accent: mat.define-palette($runner-accent, darker);
+
+//$machina-accent: mat.define-palette(mat.$grey-palette, 800, 50, 900);
 
 // The warn palette is optional (defaults to red).
-$em-ex-machina-app-warn: mat.define-palette(mat.$red-palette);
+$machina-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$em-ex-machina-app-theme: mat.define-light-theme((
+$machina-theme: mat.define-dark-theme((
   color: (
-    primary: $em-ex-machina-app-primary,
-    accent: $em-ex-machina-app-accent,
-    warn: $em-ex-machina-app-warn,
+    primary: $machina-primary,
+    accent: $machina-accent,
+    warn: $machina-warn
   )
 ));
 
-body {
-  background: mat.get-color-from-palette($em-ex-machina-app-primary, darker);
+body, mat-sidenav.mat-drawer, mat-sidenav-container.mat-drawer-container {
+  background: mat.get-color-from-palette($machina-primary, darker);
+  background-color: mat.get-color-from-palette($machina-primary, darker);
+  background-image: linear-gradient(180deg, mat.get-color-from-palette($machina-primary, darker) 0%, mat.get-color-from-palette($machina-primary) 100%);
 }
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($em-ex-machina-app-theme);
+@include mat.all-component-themes($machina-theme);
 

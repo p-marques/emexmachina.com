@@ -1,0 +1,41 @@
+<div class="standard-container">
+
+    <div class="about-container">
+        <div class="about">
+            <p>
+                EM|EX Machina is a totally real game studio created in October 2021
+                by Pedro Dias Marques (pMarK) in Lisbon, Portugal.
+            </p>
+            <p>
+                There is a logic behind the name but that doesn't matter. I mean
+                there's a studio in Boston called The Molasses Flood, named after an
+                actual disaster. Compared to that, EM|EX Machina is pretty boring
+                actually.
+            </p>
+            <p>
+                Currently it only serves to provide Project RUNNER with a legit
+                sounding studio name to list has developer.
+            </p>
+        </div>
+        <span class="flex-spacer"></span>
+        <div class="contacts">
+            <h4>Email</h4>
+            <span class="email">
+                {{ email }}
+                <button mat-icon-button [cdkCopyToClipboard]="email"
+                matTooltip="Copy to clipboard">
+                    <mat-icon>content_copy</mat-icon>
+                </button>
+            </span>
+        </div>
+    </div>
+
+    <div class="logos">
+        <h4>Logos</h4>
+        <ex-logo [type]="'default-light'"></ex-logo>
+        <ex-logo [type]="'default-dark'"></ex-logo>
+        <ex-logo [type]="'inline-light'"></ex-logo>
+        <ex-logo [type]="'inline-dark'"></ex-logo>
+    </div>
+
+</div>

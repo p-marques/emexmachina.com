@@ -1,0 +1,72 @@
+.games-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.games-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.game-card {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.game-logo {
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-logo svg {
+    width: 80%;
+}
+
+.game-details {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.game-card button {
+    height: 100%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    .game-card {
+        flex-direction: column;
+        height: 300px;
+        align-items: flex-start;
+    }
+
+    .game-logo {
+        width: 100%;
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 0;
+    }
+
+    .game-logo svg {
+        height: 90%;
+    }
+
+    .game-card button {
+        width: 100%;
+    }
+}

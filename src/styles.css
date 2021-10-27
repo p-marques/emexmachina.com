@@ -5,6 +5,55 @@ html, body {
 body {
     width: 100%;
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    color: #eee;
+    font-family: alternate-gothic-no-3-d, Roboto, "Helvetica Neue", sans-serif;
+    color: #000;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: .05rem;
+}
+
+span.flex-spacer {
+    flex: 1 1 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+a {
+    color: white;
+}
+
+.mat-button {
+    font-family: alternate-gothic-no-3-d, Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.no-hover-effect.mat-button .mat-button-focus-overlay
+{
+  background-color: transparent;
+}
+
+.standard-container {
+    padding: 5% 10%;
+    box-sizing: border-box;
+}
+
+span.note {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .standard-container {
+        padding: 5%;
+    }
 }
