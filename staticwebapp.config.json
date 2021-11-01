@@ -1,4 +1,10 @@
 {
+    "routes": [
+        {
+            "route": "/games/runner/gdd",
+            "rewrite": "/assets/Project_RUNNER_GDD.pdf"
+        }
+    ],
     "navigationFallback": {
         "rewrite": "/index.html"
     }
